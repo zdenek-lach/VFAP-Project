@@ -1,46 +1,36 @@
 import './App.css';
-import LoginForm from './components/LoginForm';
-import React, {useState} from 'react';
-import AppContent from './components/AppContent'
+import axios from "axios";
+import Header from "./BreakingBadTutorial/ui/Header";
+import {useEffect, useState} from "react";
+import Reservation from "./components/Reservation";
+
 function App() {
-    const adminUser = {
-        username: "admin",
-        password: "admin"
-    }
-    const [user, setUser] = useState({username: ""});
-    const [error, setError] = useState("");
+    const [items, setItems] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+    const [query, setQuery] = useState('');
 
-    const Login = details => {
-        console.log(details);
-        if (details.username === adminUser.username && details.password === adminUser.password) {
-            console.log("Logged in")
-            setUser(
-                {
-                    username: details.username
-                }
-            )
-        } else {
-            console.log("bad credentials")
-            setError("Details do not match!")
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const result = await axios(`https://6284166e3060bbd347344ebb.mockapi.io/reservation`);
+            // console.log(result.data);
+            setItems(result.data);
+            setIsLoading(false);
         }
-    }
-
-    const Logout = () => {
-        console.log("Logout");
-        setUser({username: "", email: ""})
-    }
-
+        fetchData();
+    }, [query])
     return (
         <div className="App">
-            {(user.username !== "") ? (
-                <div className="welcome">
-                    <h2>Welcome, <span>{user.username}</span></h2>
-                    <button onClick={Logout}>Logout</button>
-                    <AppContent/>
+            {/*<BBApp/>*/}
 
-                </div>
-            ) : (<LoginForm Login={Login} error={error}/>)
-            }
+            {/*<LoginPage/>*/}
+
+            <div>
+                <Header/>
+                <Reservation isLoading={isLoading} items={items}/>
+            </div>
+
+
 
         </div>
     );
