@@ -1,8 +1,7 @@
 import './App.css';
-import LoginForm from "./Components/LoginForm";
-import TestApi from "./Components/TestApi";
-import React, {useState} from "react";
-
+import LoginForm from './components/LoginForm';
+import React, {useState} from 'react';
+import AppContent from './components/AppContent'
 function App() {
     const adminUser = {
         username: "admin",
@@ -13,15 +12,14 @@ function App() {
 
     const Login = details => {
         console.log(details);
-        if (details.username === adminUser.username && details.password === adminUser.password){
+        if (details.username === adminUser.username && details.password === adminUser.password) {
             console.log("Logged in")
             setUser(
                 {
                     username: details.username
                 }
             )
-        }
-        else{
+        } else {
             console.log("bad credentials")
             setError("Details do not match!")
         }
@@ -34,15 +32,15 @@ function App() {
 
     return (
         <div className="App">
-                {(user.username !== "") ? (
-                    <div className="welcome">
-                        <h2>Welcome, <span>{user.username}</span></h2>
-                        <button onClick={Logout}>Logout</button>
+            {(user.username !== "") ? (
+                <div className="welcome">
+                    <h2>Welcome, <span>{user.username}</span></h2>
+                    <button onClick={Logout}>Logout</button>
+                    <AppContent/>
 
-                        hi<TestApi/>
-                    </div>
-                ) : (<LoginForm Login={Login} error={error}/>)
-                }
+                </div>
+            ) : (<LoginForm Login={Login} error={error}/>)
+            }
 
         </div>
     );
