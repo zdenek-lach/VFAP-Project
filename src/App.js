@@ -1,8 +1,8 @@
 import './App.css';
 import axios from "axios";
-import Header from "./BreakingBadTutorial/ui/Header";
 import {useEffect, useState} from "react";
 import Reservation from "./components/Reservation";
+import VFAPHeader from "./components/VFAPHeader";
 
 function App() {
     const [items, setItems] = useState([]);
@@ -25,11 +25,10 @@ function App() {
 
             {/*<LoginPage/>*/}
 
-            <div>
-                <Header/>
-                <Reservation isLoading={isLoading} items={items}/>
-            </div>
+            <VFAPHeader/>
 
+
+            <Reservation isLoading={isLoading} reservations={items}/>
 
 
         </div>
