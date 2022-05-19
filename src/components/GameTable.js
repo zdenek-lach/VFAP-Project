@@ -50,7 +50,7 @@ const GameTable = () => {
                         <td>{game.developer}</td>
                         <td>{game.released}</td>
                         <td><Button className=" btn btn-warning">Edit</Button></td>
-                        <td><Button className=" btn btn-danger" onClick={deleteGame}>Delete</Button></td>
+                        <td><Button className=" btn btn-danger delete" onClick={deleteGame}>Delete</Button></td>
                     </tr>
                 )}
                 </tbody>

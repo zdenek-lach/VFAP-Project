@@ -3,6 +3,7 @@ import Login from "./components/Login";
 import Dashboard from "./components/Dashboard";
 import GameDetail from "./components/GameDetail";
 import GameTable from "./components/GameTable";
+import NewGameForm from "./components/NewGameForm";
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
             <Route path="/login" element={<Login/>}/>
             <Route path="/dashboard" element={<Dashboard/>}/>
             <Route path="/table" element={<GameTable/>}/>
+            <Route path="/new" element={<NewGameForm/>}/>
             <Route path="/game/:gameId" element={<GameDetail/>}/>
             <Route path="*" element={<Navigate to="/login"/>}/>
         </Routes>

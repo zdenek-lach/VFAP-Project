@@ -10,7 +10,7 @@ const Logout = () => {
     }
     return (
         <div>
-            <button onClick={removeToken} className="btn btn-dark">Logout</button>
+            <span onClick={removeToken} className="btn btn-dark">Logout</span>
         </div>
     );
 };

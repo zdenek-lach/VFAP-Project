@@ -15,7 +15,8 @@ const CustomNavbar = () => {
                     <Nav className="me-auto">
                         <Nav.Link href="/dashboard">Dashboard</Nav.Link>
                         <Nav.Link href="/table">Game Table</Nav.Link>
-                        <Nav.Link href="/"><Logout/></Nav.Link>
+                        <Nav.Link href="/new">New Game</Nav.Link>
+                        <Nav.Link href="/login"><Logout/></Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>
