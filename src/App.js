@@ -1,37 +1,17 @@
-import './App.css';
-import axios from "axios";
-import {useEffect, useState} from "react";
-import Reservation from "./components/Reservation";
-import VFAPHeader from "./components/VFAPHeader";
+import {Navigate, Route, Routes} from "react-router";
+import Login from "./components/Login";
+import Dashboard from "./components/Dashboard";
+import GameDetail from "./components/GameDetail";
 
 function App() {
-    const [items, setItems] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
-    const [query, setQuery] = useState('');
 
-
-    useEffect(() => {
-        const fetchData = async () => {
-            const result = await axios(`https://6284166e3060bbd347344ebb.mockapi.io/reservation`);
-            // console.log(result.data);
-            setItems(result.data);
-            setIsLoading(false);
-        }
-        fetchData();
-    }, [query])
     return (
-        <div className="App">
-            {/*<BBApp/>*/}
-
-            {/*<LoginPage/>*/}
-
-            <VFAPHeader/>
-
-
-            <Reservation isLoading={isLoading} reservations={items}/>
-
-
-        </div>
+        <Routes>
+            <Route path="/login" element={<Login/>}/>
+            <Route path="/dashboard" element={<Dashboard/>}/>
+            <Route path="/game/:gameId" element={<GameDetail/>}/>
+            <Route path="*" element={<Navigate to="/login"/>}/>
+        </Routes>
     );
 }
 
