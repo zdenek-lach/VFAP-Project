@@ -27,11 +27,11 @@ const Login = () => {
         <Form>
             <Form.Group className="mb-3">
                 <Form.Label>Email address</Form.Label>
-                <Form.Control type="text" placeholder="name@example.com" value={email}
+                <Form.Control type="text" placeholder="your@email.com" value={email}
                               onChange={e => setEmail(e.target.value)}/>
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                <Form.Label>Example textarea</Form.Label>
+                <Form.Label>Password</Form.Label>
                 <Form.Control type="password" value={pass} onChange={e => setPass(e.target.value)}/>
             </Form.Group>
             {isLoading ? <Spinner animation="border"/> :

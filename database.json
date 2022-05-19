@@ -3,22 +3,30 @@
     {
       "id": 1,
       "name": "Uncharted",
-      "date": "2022-05-19"
+      "genre": "Adventure",
+      "developer": "Naughty Dog",
+      "released": "2007-11-19"
     },
     {
       "id": 2,
       "name": "God of War",
-      "date": "2022-05-12"
+      "genre": "Action-adventure",
+      "developer": "Santa Monica Studio",
+      "released": "2018-04-20"
     },
     {
       "id": 3,
       "name": "Tekken 7",
-      "date": "2022-05-06"
+      "genre": "Fighter",
+      "developer": "BANDAI NAMCO Studios",
+      "released": "2015-02-18"
     },
     {
       "id": 4,
       "name": "Mortal Kombat 11",
-      "date": "2022-04-01"
+      "genre": "Fighter",
+      "developer": "Warner Bros. Interactive Entertainment",
+      "released": "2019-04-23"
     }
   ]
 }

@@ -1,5 +1,6 @@
 import {Container, Nav, Navbar} from "react-bootstrap";
 import {Navigate} from "react-router";
+import Logout from "./Logout";
 
 const CustomNavbar = () => {
 
@@ -10,12 +11,15 @@ const CustomNavbar = () => {
         <Container fluid className="m-0 p-0">
             <Navbar bg="dark" variant="dark">
                 <Container>
-                    <Navbar.Brand href="/dashboard">SuperApp</Navbar.Brand>
+                    <Navbar.Brand href="/dashboard">Sid's fav PS4 games</Navbar.Brand>
                     <Nav className="me-auto">
                         <Nav.Link href="/dashboard">Dashboard</Nav.Link>
+                        <Nav.Link href="/table">Game Table</Nav.Link>
+                        <Nav.Link href="/"><Logout/></Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>
+
         </Container>)
 }
 
