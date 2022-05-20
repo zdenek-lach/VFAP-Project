@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {useLoginQuery} from "../hooks/useLoginQuery";
+import {useLoginQuery} from "../hooks/mutations/useLoginQuery";
 import {useNavigate} from "react-router";
 import {Form, Spinner, Button} from "react-bootstrap";
 
@@ -35,7 +35,7 @@ const Login = () => {
                 <Form.Control type="password" value={pass} onChange={e => setPass(e.target.value)}/>
             </Form.Group>
             {isLoading ? <Spinner animation="border"/> :
-                <Button onClick={handleSubmit}>Login</Button>}
+                <Button type="submit" onClick={handleSubmit}>Login</Button>}
         </Form>
     );
 };

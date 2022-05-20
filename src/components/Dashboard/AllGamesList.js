@@ -1,16 +1,13 @@
-import CustomNavbar from "./CustomNavbar";
 import {Button, Card, Col, Container, Row, Spinner} from "react-bootstrap";
-import {useGamesQuery} from "../hooks/useGamesQuery";
-import {Navigate, useNavigate} from "react-router";
+import RandomSnackBar from "../RandomSnackBar";
+import {useGamesQuery} from "../../hooks/queries/useGamesQuery";
+import {useNavigate} from "react-router";
 
-const Dashboard = () => {
+const AllGamesList = () => {
 
     const {isLoading, data, isError, error} = useGamesQuery();
 
     const navigate = useNavigate();
-
-    if (!localStorage.getItem("token"))
-        return <Navigate to="/login"/>
 
     const renderGamesWithCornerCases = () => {
         if (isLoading)
@@ -19,23 +16,21 @@ const Dashboard = () => {
             console.error(error);
             return <h1>Error appeared while fetching games</h1>
         }
-        return data && data.map(game => <Col xs={12} className="mb-3">
-            <Card className="shadow border-0">
+        return data && data.map(game => <Col xs={12} className="mb-3" key={game.id}>
+            <Card className="shadow border-0 col-sm-3">
                 <Card.Body>{game.name}{"  "}{game.date}</Card.Body>
                 <Button onClick={() => navigate(`/game/${game.id}`)} color="primary">Detail</Button>
             </Card>
         </Col>)
     }
 
-    return <>
-        <CustomNavbar/>
-        <Container>
-            <h1>Games</h1>
-            <Row>
-                {renderGamesWithCornerCases()}
-            </Row>
-        </Container>
-    </>
+    return <Container>
+        <h1>Games</h1>
+        <Row>
+            {renderGamesWithCornerCases()}
+        </Row>
+        <RandomSnackBar/>
+    </Container>
 }
 
-export default Dashboard;
+export default AllGamesList;

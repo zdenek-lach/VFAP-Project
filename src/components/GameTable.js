@@ -1,21 +1,28 @@
 import React from 'react';
 import {Button, Spinner, Table} from "react-bootstrap";
-import {useGamesQuery} from "../hooks/useGamesQuery";
+import {getGamesQueryKey, useGamesQuery} from "../hooks/queries/useGamesQuery";
 import CustomNavbar from "./CustomNavbar";
-import {useGameDetailQuery} from "../hooks/useGameDetailQuery";
-import {useParams} from "react-router";
-import axios from "axios";
+import {useRemoveGameCommand} from "../hooks/mutations/useRemoveGameCommand";
+import {useQueryClient} from "react-query";
 
 const GameTable = () => {
 
-    const {isLoading, data, isError, error} = useGamesQuery();
-    const {gameId} = useParams();
-    const {specificData} = useGameDetailQuery(gameId);
+    const queryClient = useQueryClient();
 
-    const deleteGame = (gameToDelete) => {
-        axios.delete(`http://localhost:8000/games/${gameToDelete.id}`, {
-            headers: {
-                "Authorization": `Bearer ${localStorage.getItem("token")}`
+    const {isLoading, data, isError, error} = useGamesQuery();
+    const {
+        mutate
+    } = useRemoveGameCommand();
+
+    const handleRemove = (id) => {
+        mutate(id, {
+            onSuccess: () => {
+                queryClient.invalidateQueries(getGamesQueryKey());
+                //tuna zobraz ten toast ze sa uspesne odstranil
+            },
+            onError: () => {
+                alert("wtf bro");
+                //toast napr ze je error
             }
         })
     }
@@ -49,8 +56,19 @@ const GameTable = () => {
                         <td>{game.genre}</td>
                         <td>{game.developer}</td>
                         <td>{game.released}</td>
-                        <td><Button className=" btn btn-warning">Edit</Button></td>
-                        <td><Button className=" btn btn-danger delete" onClick={deleteGame}>Delete</Button></td>
+                        <td>
+                            <Button
+                                className=" btn btn-warning"
+                                onClick={() => {
+                                }}
+                            >Edit</Button>
+                        </td>
+                        <td>
+                            <Button
+                                className=" btn btn-danger delete"
+                                onClick={() => handleRemove(game.id)}
+                            >Delete</Button>
+                        </td>
                     </tr>
                 )}
                 </tbody>

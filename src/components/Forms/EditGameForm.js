@@ -1,16 +1,19 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Button, Form} from "react-bootstrap";
-import CustomNavbar from "./CustomNavbar";
-import DatePicker from "react-datepicker";
-import CustomDatePicker from "./CustomDatePicker";
+import 'react-tabs/style/react-tabs.css';
+import {useParams} from "react-router";
+import {useGameDetailQuery} from "../../hooks/queries/useGameDetailQuery";
 
+const EditGameForm = () => {
+    const {gameId} = useParams();
+    const {specificData} = useGameDetailQuery(gameId);
+    return (
+        <form className="container">
+            <Form.Group className="mb-3">
+                <Form.Label>Game ID</Form.Label>
+                <Form.Control type="number" value={specificData}/>
+            </Form.Group>
 
-const MyGameForm = () => {
-        const [startDate, setStartDate] = useState(new Date());
-
-
-    const renderNewGameForm = () => {
-        return <form className="container">
             <Form.Group className="mb-3">
                 <Form.Label>Game Title</Form.Label>
                 <Form.Control type="text" placeholder="Epic game title"/>
@@ -23,24 +26,24 @@ const MyGameForm = () => {
                 <Form.Label>Developer</Form.Label>
                 <Form.Control type="text" placeholder="Honorable notice of developer"/>
             </Form.Group>
+
             <Form.Group className="mb-3">
                 <Form.Label>Released</Form.Label>
-                <Form.Control type="text" placeholder="The date of release"/>
-                <CustomDatePicker/>
+                <div className="input-group mb-2">
+                    <input type="date"
+                           className="form-control form-control-lg"
+                           placeholder="DD.MM.YYYY"
+                           required/>
+                </div>
+
             </Form.Group>
 
             <Button variant="primary" type="submit">
-                Save
+                Edit
             </Button>
         </form>
-    }
-    return (
-        <>
-            <CustomNavbar/>
-            {renderNewGameForm()}
-        </>
     )
 };
 
 
-export default MyGameForm;
+export default EditGameForm;

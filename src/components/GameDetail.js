@@ -1,5 +1,5 @@
 import {Navigate, useParams} from "react-router";
-import {useGameDetailQuery} from "../hooks/useGameDetailQuery";
+import {useGameDetailQuery} from "../hooks/queries/useGameDetailQuery";
 import { Container, Spinner} from "react-bootstrap";
 import CustomNavbar from "./CustomNavbar";
 
