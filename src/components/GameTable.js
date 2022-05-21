@@ -4,6 +4,7 @@ import {getGamesQueryKey, useGamesQuery} from "../hooks/queries/useGamesQuery";
 import CustomNavbar from "./CustomNavbar";
 import {useRemoveGameCommand} from "../hooks/mutations/useRemoveGameCommand";
 import {useQueryClient} from "react-query";
+import {useEditGameCommand} from "../hooks/mutations/useEditGameCommand";
 
 const GameTable = () => {
 
@@ -11,14 +12,30 @@ const GameTable = () => {
 
     const {isLoading, data, isError, error} = useGamesQuery();
     const {
-        mutate
+        del
     } = useRemoveGameCommand();
+    const {
+        edit
+    } = useEditGameCommand();
 
     const handleRemove = (id) => {
-        mutate(id, {
+        del(id, {
             onSuccess: () => {
                 queryClient.invalidateQueries(getGamesQueryKey());
                 //tuna zobraz ten toast ze sa uspesne odstranil
+            },
+            onError: () => {
+                alert("wtf bro");
+                //toast napr ze je error
+            }
+        })
+    }
+
+    const handleEdit = (id) => {
+        edit(id, {
+            onSuccess: () => {
+                queryClient.invalidateQueries(getGamesQueryKey());
+                //tuna zobraz ten toast ze sa uspesne editovalo
             },
             onError: () => {
                 alert("wtf bro");
@@ -52,7 +69,7 @@ const GameTable = () => {
                 {data && data.map(game =>
                     <tr>
                         <td>{game.id}</td>
-                        <td>{game.name}</td>
+                        <td>{game.title}</td>
                         <td>{game.genre}</td>
                         <td>{game.developer}</td>
                         <td>{game.released}</td>
@@ -60,6 +77,7 @@ const GameTable = () => {
                             <Button
                                 className=" btn btn-warning"
                                 onClick={() => {
+                                    handleEdit(game.id)
                                 }}
                             >Edit</Button>
                         </td>

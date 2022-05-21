@@ -1,6 +1,6 @@
 import {Container, Nav, Navbar} from "react-bootstrap";
 import {Navigate} from "react-router";
-import Logout from "./Logout";
+import Logout from "./auth/Logout";
 
 const CustomNavbar = () => {
 
@@ -14,7 +14,7 @@ const CustomNavbar = () => {
                     <Navbar.Brand href="/dashboard">Sid's fav PS4 games</Navbar.Brand>
                     <Nav className="me-auto">
                         <Nav.Link href="/dashboard">Dashboard</Nav.Link>
-                        <Nav.Link href="/table">Game Table</Nav.Link>
+                        <Nav.Link href="/dashboard/table">Game Table</Nav.Link>
                         <Nav.Link className="btn btn-danger" href="/login"><Logout/></Nav.Link>
                     </Nav>
                 </Container>

@@ -23,7 +23,7 @@ const GameDetail = () => {
         }
 
         return <Container>
-            <h1>Title: <b>{data.name}</b></h1>
+            <h1>Title: <b>{data.title}</b></h1>
             <h2>Genre: {data.genre}</h2>
             <h2>Publisher: {data.developer}</h2>
             <h2>Released: {data.released}</h2>

@@ -1,7 +1,7 @@
 import {useMutation} from "react-query";
 import axios from "axios";
 
-export const useCreateGameCommand = config =>
+export const useCreateGameCommand = () =>
     useMutation("newGame", (newGame) =>
         axios.post(`http://localhost:8000/games`, newGame, {
             headers: {

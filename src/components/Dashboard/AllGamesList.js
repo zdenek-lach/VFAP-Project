@@ -18,7 +18,7 @@ const AllGamesList = () => {
         }
         return data && data.map(game => <Col xs={12} className="mb-3" key={game.id}>
             <Card className="shadow border-0 col-sm-3">
-                <Card.Body>{game.name}{"  "}{game.date}</Card.Body>
+                <Card.Body>{game.title}{"  "}{game.date}</Card.Body>
                 <Button onClick={() => navigate(`/game/${game.id}`)} color="primary">Detail</Button>
             </Card>
         </Col>)

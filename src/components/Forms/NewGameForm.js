@@ -10,7 +10,7 @@ const NewGameForm = () => {
     const [title, setTitle] = useState("");
     const [genre, setGenre] = useState("");
     const [developer, setDeveloper] = useState("");
-    const [release, setRelease] = useState("");
+    const [released, setReleased] = useState("");
 
     const {isLoading, mutate} = useCreateGameCommand();
     const queryClient = useQueryClient();
@@ -19,7 +19,7 @@ const NewGameForm = () => {
     return (
         <form className="container" onSubmit={(e) => {
             e.preventDefault();
-            mutate({name: title, genre, developer, released: release}, {
+            mutate({name: title, genre, developer, released}, {
                 onSuccess: () => {
                     queryClient.invalidateQueries(getGamesQueryKey());
                     navigate("/dashboard");
@@ -66,8 +66,8 @@ const NewGameForm = () => {
                         className="form-control form-control-lg"
                         placeholder="DD.MM.YYYY"
                         required
-                        value={release}
-                        onChange={(e) => setRelease(e.target.value)}
+                        value={released}
+                        onChange={(e) => setReleased(e.target.value)}
                     />
                 </div>
             </Form.Group>
