@@ -1,7 +1,8 @@
 import {Button, Card, Col, Container, Row, Spinner} from "react-bootstrap";
-import RandomSnackBar from "../RandomSnackBar";
 import {useGamesQuery} from "../../hooks/queries/useGamesQuery";
 import {useNavigate} from "react-router";
+import CardHeader from "react-bootstrap/CardHeader";
+import React from 'react';
 
 const AllGamesList = () => {
 
@@ -18,18 +19,17 @@ const AllGamesList = () => {
         }
         return data && data.map(game => <Col xs={12} className="mb-3" key={game.id}>
             <Card className="shadow border-0 col-sm-3">
-                <Card.Body>{game.title}{"  "}{game.date}</Card.Body>
+                <CardHeader><h4>{game.title}</h4></CardHeader>
+                <Card.Body><b>Genre:</b> {game.genre}</Card.Body>
                 <Button onClick={() => navigate(`/game/${game.id}`)} color="primary">Detail</Button>
             </Card>
         </Col>)
     }
 
     return <Container>
-        <h1>Games</h1>
         <Row>
             {renderGamesWithCornerCases()}
         </Row>
-        <RandomSnackBar/>
     </Container>
 }
 

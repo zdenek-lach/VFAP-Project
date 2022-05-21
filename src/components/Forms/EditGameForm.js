@@ -11,7 +11,7 @@ const EditGameForm = ({game, onSubmit, isLoading}) => {
         <form className="container" onSubmit={(e) => {
             e.preventDefault();
             if (onSubmit)
-                onSubmit({name: title, genre, developer, released});
+                onSubmit({title: title, genre, developer, released});
         }}>
             <Form.Group className="mb-3">
                 <Form.Label>Game Title</Form.Label>

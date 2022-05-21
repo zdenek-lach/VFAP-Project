@@ -19,7 +19,7 @@ const NewGameForm = () => {
     return (
         <form className="container" onSubmit={(e) => {
             e.preventDefault();
-            mutate({name: title, genre, developer, released}, {
+            mutate({title: title, genre, developer, released}, {
                 onSuccess: () => {
                     queryClient.invalidateQueries(getGamesQueryKey());
                     navigate("/dashboard");

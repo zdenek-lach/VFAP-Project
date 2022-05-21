@@ -9,8 +9,8 @@ import EditGameContainer from "./Forms/EditGameContainer";
 const SecuredRouter = () => <PrivateRoute>
     <Routes>
         <Route path="table" element={<GameTable/>}/>
-        <Route path="game/:gameId/edit" element={<EditGameContainer/>}/>
         <Route path="game/:gameId" element={<GameDetail/>}/>
+        <Route path="game/:gameId/edit" element={<EditGameContainer/>}/>
         <Route path="/*" element={<Dashboard/>}/>
     </Routes>
 </PrivateRoute>;

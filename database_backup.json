@@ -1,0 +1,32 @@
+{
+  "games": [
+    {
+      "id": 1,
+      "title": "Uncharted",
+      "genre": "Adventure",
+      "developer": "Naughty Dog",
+      "released": "2007-11-19"
+    },
+    {
+      "id": 2,
+      "title": "God of War",
+      "genre": "Action-adventure",
+      "developer": "Santa Monica Studio",
+      "released": "2018-04-20"
+    },
+    {
+      "id": 3,
+      "title": "Tekken 7",
+      "genre": "Fighter",
+      "developer": "BANDAI NAMCO Studios",
+      "released": "2015-02-18"
+    },
+    {
+      "id": 4,
+      "title": "Mortal Kombat 11",
+      "genre": "Fighter",
+      "developer": "Warner Bros. Interactive Entertainment",
+      "released": "2019-04-23"
+    }
+  ]
+}
