@@ -1,12 +1,11 @@
 import React from 'react';
-import {Button, Spinner, Table} from "react-bootstrap";
+import {Button, Container, Spinner, Table} from "react-bootstrap";
 import {getGamesQueryKey, useGamesQuery} from "../../hooks/queries/useGamesQuery";
 import {useRemoveGameCommand} from "../../hooks/mutations/useRemoveGameCommand";
 import {useQueryClient} from "react-query";
 import {useNavigate} from "react-router";
-import { ToastContainer, toast } from 'react-toastify';
+import {toast, ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import MagicTab from "../MagicTab";
 
 const GameTable = () => {
 
@@ -49,7 +48,7 @@ const GameTable = () => {
         return <h1>Error appeared while fetching games</h1>
     }
     return (
-        <>
+        <Container className="vh-100 mt-5">
             <Table striped bordered hover size="sm" variant="dark">
                 <thead>
                 <tr>
@@ -86,9 +85,8 @@ const GameTable = () => {
                 )}
                 </tbody>
             </Table>
-            <MagicTab/>
             <ToastContainer/>
-        </>
+        </Container>
     );
 };
 

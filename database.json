@@ -1,32 +1,49 @@
 {
   "games": [
     {
-      "id": 1,
       "title": "Uncharted",
       "genre": "Adventure",
       "developer": "Naughty Dog",
-      "released": "2007-11-19"
+      "released": "2007-11-19",
+      "wikisnip": "It is the first game in the Uncharted series and was released in November 2007 for PlayStation 3. The game follows Nathan Drake, the supposed descendant of explorer Sir Francis Drake, as he searches for the lost treasure of El Dorado with journalist Elena Fisher and mentor Victor Sullivan.",
+      "imageURL": "https://m.media-amazon.com/images/I/A1Er5NlA3eL._SL1500_.jpg",
+      "id": 1
     },
     {
       "id": 2,
       "title": "God of War",
-      "genre": "Action-adventure",
+      "genre": "Action adventure",
       "developer": "Santa Monica Studio",
-      "released": "2018-04-20"
+      "released": "2018-04-20",
+      "imageURL": "https://cdn1.epicgames.com/offer/3ddd6a590da64e3686042d108968a6b2/EGS_GodofWar_SantaMonicaStudio_S2_1200x1600-fbdf3cbc2980749091d52751ffabb7b7_1200x1600-fbdf3cbc2980749091d52751ffabb7b7",
+      "wikisnip": "It began in 2005 on the PlayStation 2 (PS2) video game console, and has become a flagship title for the PlayStation brand, consisting of ten games across multiple platforms with an eleventh currently in development. Based in ancient mythology, the story follows the titular protagonist, Kratos, a Spartan warrior and later the God of War, who was tricked into killing his family by his former master, the original Greek god of war Ares. This sets off a series of events that leads to wars with the mythological pantheons. The Greek mythology era of the series sees Kratos follow a path of vengeance due to the machinations of the Olympian gods, while the Norse mythology era, which introduces his son Atreus as a secondary protagonist, shows an older Kratos on a path of redemption, which inadvertently brings the two into conflict with the Norse gods."
     },
     {
       "id": 3,
       "title": "Tekken 7",
       "genre": "Fighter",
       "developer": "BANDAI NAMCO Studios",
-      "released": "2015-02-18"
+      "released": "2015-05-18",
+      "imageURL": "https://image.api.playstation.com/cdn/EP0700/CUSA06014_00/60LMXmTtlbr3RwGglLc9awmBpcFRCC5S.png",
+      "wikisnip": "Tekken 7 is a fighting game developed and published by Bandai Namco Entertainment. It is the seventh main and ninth overall installment in the Tekken series. Tekken 7 had a limited arcade release in March 2015. An updated arcade version, Tekken 7: Fated Retribution, was released in July 2016, and features expanded content including new stages, costumes, items and characters.[3] The home versions released for PlayStation 4, Xbox One and Microsoft Windows in June 2017 were based on Fated Retribution."
     },
     {
-      "id": 4,
-      "title": "Mortal Kombat 11",
-      "genre": "Fighter",
-      "developer": "Warner Bros. Interactive Entertainment",
-      "released": "2019-04-23"
+      "title": "Assassin's Creed: Valhalla",
+      "genre": "Action RPG",
+      "developer": "Ubisoft Montreal",
+      "released": "2020-11-10",
+      "wikisnip": "Assassin's Creed Valhalla is a 2020 action role-playing video game developed by Ubisoft Montreal and published by Ubisoft. It is the twelfth major installment in the Assassin's Creed series, and the successor to 2018's Assassin's Creed Odyssey. Principally set in the years 872–878 AD, the game recounts a fictional story during the Viking expansions into the British Isles. Players control Eivor Varinsdottir, a Viking raider who, while attempting to establish a new Viking clan in England, becomes embroiled in the centuries-old conflict between the Assassin Brotherhood, who fight for peace and liberty, and the Templar Order, who desire peace through control.[c] The modern-day portion of the story is set in the 21st century and follows Layla Hassan, an Assassin who relives Eivor's memories so as to find a way to save the Earth from destruction.",
+      "imageURL": "https://image.api.playstation.com/vulcan/ap/rnd/202008/1318/8XGEPtD1xoasK0FYkYNcCn1z.png",
+      "id": 4
+    },
+    {
+      "title": "Minecraft",
+      "genre": "Sandbox Survival",
+      "developer": "Mojang",
+      "released": "2011-11-18",
+      "wikisnip": "Minecraft is a sandbox video game developed by Mojang Studios. The game was created by Markus \"Notch\" Persson in the Java programming language. Following several early private testing versions, it was first made public in May 2009 before fully releasing in November 2011, with Notch stepping down and Jens \"Jeb\" Bergensten taking over development. Minecraft has since been ported to several other platforms and is the best-selling video game of all time, with over 238 million copies sold and nearly 140 million monthly active users as of 2021.",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/en/5/51/Minecraft_cover.png",
+      "id": 5
     }
   ]
 }

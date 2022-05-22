@@ -5,6 +5,7 @@ import {BrowserRouter} from "react-router-dom";
 import {QueryClientProvider, QueryClient} from "react-query";
 import {ReactQueryDevtools} from "react-query/devtools";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../src/components/styling/GlobalStyle.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -27,10 +27,8 @@ const EditGameContainer = () => {
             onSuccess: () => {
                 queryClient.invalidateQueries(getGamesQueryKey());
                 navigate("/dashboard/table")
-                //fire toast of success creation
             },
             onError: () => {
-                //fire toast of failed creation
             }
         })
     }

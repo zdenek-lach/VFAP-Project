@@ -1,6 +1,6 @@
 import React from "react";
 import {Navigate} from "react-router";
-import CustomNavbar from "../CustomNavbar";
+import CustomNavbar from "../general/CustomNavbar";
 
 const PrivateRoute = ({children}) => {
 

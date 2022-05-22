@@ -1,7 +1,9 @@
-import Router from "./components/Router";
+import Router from "./components/general/Router";
 
 function App() {
-    return <Router/>
+    return <div className="gradient-custom">
+        <Router/>
+    </div>
 }
 
 export default App;

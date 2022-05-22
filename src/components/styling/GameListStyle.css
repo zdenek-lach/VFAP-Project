@@ -1,0 +1,19 @@
+#game-img{
+    max-width: 250px;
+    max-height: 250px;
+    padding: 5px;
+    margin: auto;
+    object-fit: cover;
+}
+.detail-img{
+    margin: auto;
+    max-width: 700px;
+    max-height: 700px;
+}
+.game-descriptor{
+    font-size: 22px;
+}
+.game-text{
+    font-size: 24px;
+    font-weight: 500;
+}
