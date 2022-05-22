@@ -17,33 +17,6 @@ const AllGamesList = () => {
             console.error(error);
             return <h1>Error appeared while fetching games</h1>
         }
-        // return data && data.map(game =>
-            //     <Col xs={12} className="mb-3" key={game.id}>
-            //     <Card className="shadow border-0 col-sm-3">
-            //         <CardHeader><h4>{game.title}</h4></CardHeader>
-            //         <Card.Body><b>Genre:</b> {game.genre}</Card.Body>
-            //         <Button onClick={() => navigate(`/dashboard/game/${game.id}`)} color="primary">Detail</Button>
-            //     </Card>
-            // </Col>
-
-
-            // <div className="card mb-3" style={{maxWidth: 540}}>
-            //     <div className="row g-0">
-            //         <div className="col-md-4">
-            //             <img src={game.imageURL} className="img-fluid rounded-start" alt="IMAGE"/>
-            //         </div>
-            //         <div className="col-md-8">
-            //             <div className="card-body">
-            //                 <h5 className="card-title">{game.title}</h5>
-            //                 <p className="card-text"><small className="text-muted">{game.genre}</small></p>
-            //                 <p className="card-text">{game.wikisnip.length > 120 ? game.wikisnip.substring(0,120) + "..." : game.wikisnip }</p>
-            //
-            //             </div>
-            //         </div>
-            //     </div>
-            // </div>
-
-
             return <Row xs={1} md={2} lg={3} xl={4} className="g-4">
                 {data && data.map(game => (
                     <Col>

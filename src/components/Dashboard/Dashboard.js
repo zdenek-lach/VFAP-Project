@@ -4,7 +4,7 @@ import AllGamesList from "./AllGamesList";
 import NewGameForm from "../Forms/NewGameForm";
 
 const Dashboard = () => <div className="vh-100">
-    <Container className="my-4 bg-dark">
+    <Container className="my-4 bg-dark p-3">
         <Nav variant="tabs">
             <Nav.Item>
                 <Nav.Link href="/dashboard" className="text-white">All Games</Nav.Link>
