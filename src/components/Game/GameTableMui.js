@@ -1,12 +1,11 @@
 import MUIDataTable from "mui-datatables";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-
 import {useGamesQuery} from "../../hooks/queries/useGamesQuery";
 import React from "react";
-
 import {Button, Container} from "react-bootstrap";
-const MagicTab = ({handleEdit, handleRemove}) => {
 
+
+const GameTableMui = ({handleEdit, handleRemove}) => {
 
     const darkTheme = createTheme({
         palette: {
@@ -36,7 +35,7 @@ const MagicTab = ({handleEdit, handleRemove}) => {
             label: "Genre",
             options: {
                 filter: true,
-                sort: false,
+                sort: true,
             }
         },
         {
@@ -100,5 +99,5 @@ const MagicTab = ({handleEdit, handleRemove}) => {
 
     </Container>
 };
-export default MagicTab;
+export default GameTableMui;
 

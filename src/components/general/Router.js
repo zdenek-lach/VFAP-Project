@@ -5,12 +5,10 @@ import GameTable from "../Game/GameTable";
 import GameDetail from "../Game/GameDetail";
 import PrivateRoute from "../auth/PrivateRoute";
 import EditGameContainer from "../Forms/EditGameContainer";
-import GameTableMui from "../Game/GameTableMui";
 
 const SecuredRouter = () => <PrivateRoute>
     <Routes>
         <Route path="table" element={<GameTable/>}/>
-        <Route path="tablemui" element={<GameTableMui/>}/>
         <Route path="game/:gameId" element={<GameDetail/>}/>
         <Route path="game/:gameId/edit" element={<EditGameContainer/>}/>
         <Route path="/*" element={<Dashboard/>}/>

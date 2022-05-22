@@ -2,11 +2,12 @@
     background-image: linear-gradient(to right, #6911ca, #4c3cdf, #2573fb, #4f85ff);
     background-position: 0;
     background-size: 200%;
-    transition: 1s;
+    transition: 0.4s;
     font-weight: 700;
     cursor: pointer;
 }
 .btn-gradient:hover{
+    transition: 0.4s;
     background-position: 100% 0;
     -webkit-box-shadow: 5px 5px 18px 1px #000000;
     box-shadow: 5px 5px 18px 1px #000000;
