@@ -1,12 +1,9 @@
-import './App.css';
-import HelloWorld from "./Components/HelloWorld";
+import Router from "./components/general/Router";
 
 function App() {
-  return (
-    <div className="App">
-      <HelloWorld/>
+    return <div className="gradient-custom">
+        <Router/>
     </div>
-  );
 }
 
 export default App;
