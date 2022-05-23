@@ -47,6 +47,7 @@ const NewGameForm = () => {
                                     type="text"
                                     placeholder="Epic game title"
                                     value={title}
+                                    required
                                     onChange={(e) => setTitle(e.target.value)}
                                 />
                             </Form.Group>
@@ -56,6 +57,7 @@ const NewGameForm = () => {
                                     type="text"
                                     placeholder="The actual genre"
                                     value={genre}
+                                    required
                                     onChange={(e) => setGenre(e.target.value)}
                                 />
                             </Form.Group>
@@ -65,6 +67,7 @@ const NewGameForm = () => {
                                     type="text"
                                     placeholder="Honorable notice of developer"
                                     value={developer}
+                                    required
                                     onChange={(e) => setDeveloper(e.target.value)}
                                 />
                             </Form.Group>
