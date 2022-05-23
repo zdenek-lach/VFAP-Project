@@ -44,6 +44,33 @@
       "wikisnip": "Minecraft is a sandbox video game developed by Mojang Studios. The game was created by Markus \"Notch\" Persson in the Java programming language. Following several early private testing versions, it was first made public in May 2009 before fully releasing in November 2011, with Notch stepping down and Jens \"Jeb\" Bergensten taking over development. Minecraft has since been ported to several other platforms and is the best-selling video game of all time, with over 238 million copies sold and nearly 140 million monthly active users as of 2021.",
       "imageURL": "https://upload.wikimedia.org/wikipedia/en/5/51/Minecraft_cover.png",
       "id": 5
+    },
+    {
+      "title": "Mortal Kombat 11: Ultimate",
+      "genre": "Fighter",
+      "developer": "Warner Bros. Interactive Entertainment",
+      "released": "2019-04-23",
+      "wikisnip": "Mortal Kombat 11 is a 2019 fighting game developed by NetherRealm Studios and published by Warner Bros. Interactive Entertainment. Running on a heavily modified version of Unreal Engine 3,[7] it is the eleventh main installment in the Mortal Kombat series and a sequel to 2015's Mortal Kombat X. Announced at The Game Awards 2018, the game was released in North America and Europe on April 23, 2019, for Microsoft Windows, Nintendo Switch, PlayStation 4, and Xbox One—with the exception of Europe's Switch version which was released on May 10, 2019.[8] The game was released on Stadia on November 19, 2019.[9]\n\nUpon release, the console versions of Mortal Kombat 11 received generally favorable reviews, which praised the gameplay, story, graphics, and improved netcode, but it received criticism for the presence of microtransactions and over-reliance on grinding. An expansion for the game was released on May 26, 2020, entitled Mortal Kombat 11: Aftermath. This expansion includes an additional story mode, three new characters, new stages, and the return of stage fatalities and the friendship finishing move. An enhanced version of the game containing all downloadable content up to that point, titled Mortal Kombat 11: Ultimate, was released for the PlayStation 4, PlayStation 5, Xbox One, and Xbox Series X/S on November 17, 2020.",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/en/7/7e/Mortal_Kombat_11_cover_art.png",
+      "id": 6
+    },
+    {
+      "title": "It Takes Two",
+      "genre": "Action Adventure ",
+      "developer": "Hazelight Studios, EA",
+      "released": "2021-03-26",
+      "wikisnip": "It Takes Two is an action-adventure platform game developed by Hazelight Studios and published by Electronic Arts. It was released for Microsoft Windows, PlayStation 4, PlayStation 5, Xbox One, and Xbox Series X/S in March 2021. Like Hazelight's debut game A Way Out, it does not have a single-player option. It is playable only in either online or local split screen cooperative multiplayer between two players.\n\nIt Takes Two received generally favorable reviews from critics and won multiple year-end accolades, including the Game of the Year at The Game Awards 2021 and the 25th Annual D.I.C.E. Awards. The game was a commercial success, with more than 5 million copies sold by February 2022.",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/en/a/aa/It_Takes_Two_cover_art.png",
+      "id": 7
+    },
+    {
+      "title": "Unravel 1&2",
+      "genre": "Puzzle Platformer",
+      "developer": "Coldwood Interactive",
+      "released": "2019-04-25",
+      "wikisnip": "Unravel is a puzzle platform video game developed by the Swedish company Coldwood Interactive and published by Electronic Arts. It was announced on 15 June 2015 and released in February 2016 for PlayStation 4, Xbox One, and Microsoft Windows. The game centres on Yarny, a small anthropomorphic creature made of yarn the player navigates through the environment, utilizing the unraveling yarn which makes up Yarny to solve puzzles, avoid dangerous creatures, and traverse obstacles.\n\nUnravel received a favourable reception upon release, with many critics in agreement that the game's visuals, protagonist, soundtrack, and overall tone were among its strong suits. Some raised criticisms concerning the controls, variety of puzzles, and platforming. A sequel, Unravel Two, was released in June 2018.",
+      "imageURL": "https://image.api.playstation.com/cdn/EP0006/CUSA10416_00/rdMoeYqxWTVZt2IVqnZSRvjHSCDww3YM.png",
+      "id": 8
     }
   ]
 }
