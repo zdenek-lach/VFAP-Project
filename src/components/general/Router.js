@@ -1,10 +1,10 @@
 import {Navigate, Route, Routes} from "react-router";
 import Login from "../auth/Login";
-import Dashboard from "../Dashboard/Dashboard";
-import GameTable from "../Game/GameTable";
-import GameDetail from "../Game/GameDetail";
+import Dashboard from "../dashboard/Dashboard";
+import GameTable from "../game/GameTable";
+import GameDetail from "../game/GameDetail";
 import PrivateRoute from "../auth/PrivateRoute";
-import EditGameContainer from "../Forms/EditGameContainer";
+import EditGameContainer from "../forms/EditGameContainer";
 
 const SecuredRouter = () => <PrivateRoute>
     <Routes>

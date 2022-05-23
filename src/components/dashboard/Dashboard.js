@@ -1,7 +1,7 @@
 import {Nav, Container} from "react-bootstrap";
 import {Route, Routes} from "react-router";
 import AllGamesList from "./AllGamesList";
-import NewGameForm from "../Forms/NewGameForm";
+import NewGameForm from "../forms/NewGameForm";
 
 const Dashboard = () => <div className="vh-100">
     <Container className="my-4 bg-dark p-3">
